@@ -5,3 +5,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Start Project
 
 Design Layout
+
+![ProjectStructure](./src/images/structure.png)
