@@ -39,11 +39,11 @@ function ChordList() {
         <Link style = {chordButtonStyle} to="/major">Major Triad</Link>
         <Link style = {chordButtonStyle} to="/minor">Minor Triad</Link>
         <Link style = {chordButtonStyle} to="/7ths">Dominant 7ths</Link>
-        <Link style = {chordButtonStyle} to="/major">Major 7ths</Link>
-        <Link style = {chordButtonStyle} to="/major">Minor 7ths</Link>
-        <Link style = {chordButtonStyle} to="/major">Diminished</Link>
-        <Link style = {chordButtonStyle} to="/major">Half Diminished</Link>
-        <Link style = {chordButtonStyle} to="/major">Augmented</Link>
+        <Link style = {chordButtonStyle} to="/maj7">Major 7ths</Link>
+        <Link style = {chordButtonStyle} to="/min7">Minor 7ths</Link>
+        <Link style = {chordButtonStyle} to="/dim">Diminished</Link>
+        <Link style = {chordButtonStyle} to="/half-dim">Half Diminished</Link>
+        <Link style = {chordButtonStyle} to="/aug">Augmented</Link>
       </div>
       <Link to='/'>Main Menu</Link>
     </div>
