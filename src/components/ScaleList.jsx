@@ -20,6 +20,7 @@ function ScaleList() {
   const scaleButtonStyle = {
     display: 'flex',
     alignItems: 'center',
+    overflow: 'hidden',
     height: '90px',
     width: '100px',
     margin: '5px',
@@ -36,8 +37,8 @@ function ScaleList() {
     <div style = {scaleListStyle}>
       <h1>Select a Chord Type</h1>
       <div style = {scaleButtonDivStyle}>
-        <Link style = {scaleButtonStyle} to="/ionian">Major/Ionian</Link>
-        <Link style = {scaleButtonStyle} to="/aeolian">Natural Minor/Aeolian</Link>
+        <Link style = {scaleButtonStyle} to="/ionian">Major / Ionian</Link>
+        <Link style = {scaleButtonStyle} to="/aeolian">Natural Minor / Aeolian</Link>
         <Link style = {scaleButtonStyle} to="/harmonic">Harmonic Minor</Link>
         <Link style = {scaleButtonStyle} to="/melodic">Melodic Minor</Link>
         <Link style = {scaleButtonStyle} to="/pentatonic-minor">Pentatonic Minor</Link>

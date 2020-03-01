@@ -6,7 +6,7 @@ import { Switch, Route } from 'react-router-dom';
 import RootMenu from './components/RootMenu';
 import NoteMenu from './components/NoteMenu';
 import ChordList from './components/ChordList';
-
+import ScaleList from './components/ScaleList';
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
       <Switch>
       <Route exact path='/' render={()=><NoteMenu />} />
       <Route exact path='/chords' render={()=><ChordList />} />
+      <Route exact path='/scales' render={()=><ScaleList />} />
       </Switch>
       </div>
     </div>
