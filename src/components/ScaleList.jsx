@@ -28,7 +28,7 @@ function ScaleList() {
     color: 'black',
     fontWeight: 'bold',
     fontSize: '20px',
-    backgroundImage: 'linear-gradient(#CEC0BE, #696261)',
+    backgroundImage: 'linear-gradient(#CDC0BF, #696261)',
     border: '1px solid black',
     textShadow: '1px 1px white, 1px -1px white, -1px 1px white, -1px -1px white'
   }

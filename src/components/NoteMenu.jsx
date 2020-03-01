@@ -25,14 +25,14 @@ function NoteMenu() {
     width: '100px',
     margin: '5px',
     fontSize: '20px',
-    backgroundImage: 'linear-gradient(#CEC0BE, #696261)',
+    backgroundImage: 'linear-gradient(#CDC0BF, #696261)',
     border: '1px solid black',
     textShadow: '1px 1px white, 1px -1px white, -1px 1px white, -1px -1px white'
   }
 
   return (
     <div style = {noteMenuStyle}>
-        <h1 style = {rootNoteStyle}>Root Note (C)</h1>
+        <h1 style = {rootNoteStyle}>Root Note ex.(C)</h1>
         <div style = {noteButtonsDivStyle}>
           <Link style = {noteButtonStyle} to="/chords">View Chord Types</Link>
           <Link style = {noteButtonStyle} to="/scales">View Scales</Link>
