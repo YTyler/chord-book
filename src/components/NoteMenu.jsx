@@ -10,33 +10,33 @@ function NoteMenu() {
     marginLeft: '5px'
   }
   const rootNoteStyle = {
-    textAlign: 'left',
+    textAlign: 'right',
     padding: '5px',
   }
   const noteButtonsDivStyle = {
-    display: 'flex',
+    display: 'grid',
     gridTemplateColumns: '1fr 1fr 1fr',
-    justifyContent: 'space-around',
-    border: '1px solid black',
+    justifyItems: 'center',
   }
   const noteButtonStyle = {
-    padding: '20px',
-    height: '10vh',
-    width: '10vw',
+    display: 'flex',
+    alignItems: 'center',
+    height: '100px',
+    width: '100px',
     margin: '5px',
     fontSize: '20px',
     backgroundImage: 'linear-gradient(#CEC0BE, #696261)',
     border: '1px solid black',
+    textShadow: '1px 1px white, 1px -1px white, -1px 1px white, -1px -1px white'
   }
 
   return (
     <div style = {noteMenuStyle}>
-        <h1>Selection Menu</h1>
-        <h2 style = {rootNoteStyle}>Root Note (C)</h2>
+        <h1 style = {rootNoteStyle}>Root Note (C)</h1>
         <div style = {noteButtonsDivStyle}>
           <Link style = {noteButtonStyle} to="/chords">Chord Types</Link>
-          <Link style = {noteButtonStyle} to="/scales">Scales</Link>
-
+          <Link style = {noteButtonStyle} to="/scales">Select Scales</Link>
+          <Link style = {noteButtonStyle} to="/intervals">Explore Intervals</Link>
         </div>
       </div>
   );

@@ -6,12 +6,13 @@ function RootMenu() {
     borderRadius: '10px',
     minHeight: '300px',
     minWidth: '250px',
-    marginRight: '5px'
+    marginRight: '5px',
+    fontSize: '10px'
   }
 
   return (
     <div style = {rootMenuStyle}>
-      <h1>Root Note Menu</h1>
+      <h1>Select Root Note</h1>
     </div>
   );
 }
