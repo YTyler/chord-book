@@ -8,9 +8,17 @@ import NoteMenu from './components/NoteMenu';
 
 function App() {
   return (
-    <div className="App">
-    <RootMenu/>
-    <Route exact path='/' render={()=><NoteMenu />} />
+    <div>
+    <h1>App Title</h1>
+      <div className="App">
+        <div>
+        <RootMenu/>
+        <h2 id='saved'>Saved Info</h2>
+        </div>
+      <Switch>
+      <Route exact path='/' render={()=><NoteMenu />} />
+      </Switch>
+      </div>
     </div>
   );
 }
