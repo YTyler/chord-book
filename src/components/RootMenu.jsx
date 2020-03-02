@@ -7,7 +7,6 @@ function RootMenu() {
     minHeight: '300px',
     minWidth: '250px',
     marginRight: '5px',
-    fontSize: '10px'
   }
   const rootDivStyle = {
     display: 'grid',
@@ -16,7 +15,7 @@ function RootMenu() {
 
   return (
     <div style = {rootMenuStyle}>
-      <h1>Select Root Note</h1>
+      <h2>Select Root Note</h2>
       <div style = {rootDivStyle}>
         <h2>A</h2>
         <h2>B</h2>

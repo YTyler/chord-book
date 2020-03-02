@@ -34,9 +34,9 @@ function NoteMenu() {
     <div style = {noteMenuStyle}>
         <h1 style = {rootNoteStyle}>Root Note ex.(C)</h1>
         <div style = {noteButtonsDivStyle}>
-          <Link style = {noteButtonStyle} to="/chords">View Chord Types</Link>
-          <Link style = {noteButtonStyle} to="/scales">View Scales</Link>
-          <Link style = {noteButtonStyle} to="/intervals">Explore Intervals</Link>
+          <Link style = {noteButtonStyle} to = "/chords">View Chord Types</Link>
+          <Link style = {noteButtonStyle} to = "/scales">View Scales</Link>
+          <Link style = {noteButtonStyle} to = "/intervals">Explore Intervals</Link>
         </div>
       </div>
   );
