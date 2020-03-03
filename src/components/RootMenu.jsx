@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function RootMenu() {
   const rootMenuStyle = {
@@ -16,6 +16,8 @@ function RootMenu() {
   return (
     <div style = {rootMenuStyle}>
       <h2>Select Root Note</h2>
+      <h1>b</h1>
+      <h1>#</h1>
       <div style = {rootDivStyle}>
         <h2>A</h2>
         <h2>B</h2>
