@@ -5,6 +5,7 @@ function NoteMenu() {
   const noteMenuStyle = {
     border: '2px solid black',
     borderRadius: '10px',
+    padding: '15px',
     minHeight: '300px',
     minWidth: '600px',
     marginLeft: '5px'
@@ -31,7 +32,7 @@ function NoteMenu() {
 
   return (
     <div style = {noteMenuStyle}>
-        <h1 style = {noteStyle}>Root Note ex.(C)</h1>
+        <h1 style = {noteStyle}>Root Note: C</h1>
         <div style = {noteButtonContainerStyle}>
           <Link style = {noteButtonStyle} to = "/chords">View Chord Types</Link>
           <Link style = {noteButtonStyle} to = "/scales">View Scales</Link>

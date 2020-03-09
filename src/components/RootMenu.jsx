@@ -19,22 +19,22 @@ function RootMenu() {
 
   return (
     <div style = {rootMenuStyle}>
-    <h1>Select Root Note</h1>
-    <div style = {noteListStyle}>
-      <h2>A</h2>
-      <h2>B</h2>
-      <h2>C</h2>
-      <h2>D</h2>
-      <h2>E</h2>
-      <h2>F</h2>
-      <h2>G</h2>
-    </div>
+      <h1>Select Root Note</h1>
+      <div style = {noteListStyle}>
+        <h2>A</h2>
+        <h2>B</h2>
+        <h2>C</h2>
+        <h2>D</h2>
+        <h2>E</h2>
+        <h2>F</h2>
+        <h2>G</h2>
+      </div>
+      <h1>Add an Accidental</h1>
       <div style = {accidentalListStyle}>
-      <h2>b</h2>
-      <h2>#</h2>
+        <h2>b</h2>
+        <h2>#</h2>
       </div>
-
-      </div>
+    </div>
   );
 }
 
