@@ -1,11 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Time
-
-Start Project
-
-Design Layout
-
 ![Project Structure](./src/images/structure.png)
 
 # Interactive Chord & Scale Dictionary
