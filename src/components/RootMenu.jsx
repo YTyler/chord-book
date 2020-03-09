@@ -8,27 +8,33 @@ function RootMenu() {
     minWidth: '250px',
     marginRight: '5px',
   }
-  const rootDivStyle = {
-    display: 'grid',
-    gridTemplateColumns: '1fr 1fr 1fr',
+  const noteListStyle = {
+    display: 'flex',
+    justifyContent: 'space-evenly'
+  }
+  const accidentalListStyle = {
+    display: 'flex',
+    justifyContent: 'space-evenly'
   }
 
   return (
     <div style = {rootMenuStyle}>
-      <h2>Select Root Note</h2>
-      <h1>b</h1>
-      <h1>#</h1>
-      <div style = {rootDivStyle}>
-        <h2>A</h2>
-        <h2>B</h2>
-        <h2>C</h2>
-        <h2>D</h2>
-        <h2>E</h2>
-        <h2>F</h2>
-        <h2>G</h2>
-        <h2>etc.</h2>
-      </div>
+    <h1>Select Root Note</h1>
+    <div style = {noteListStyle}>
+      <h2>A</h2>
+      <h2>B</h2>
+      <h2>C</h2>
+      <h2>D</h2>
+      <h2>E</h2>
+      <h2>F</h2>
+      <h2>G</h2>
     </div>
+      <div style = {accidentalListStyle}>
+      <h2>b</h2>
+      <h2>#</h2>
+      </div>
+
+      </div>
   );
 }
 

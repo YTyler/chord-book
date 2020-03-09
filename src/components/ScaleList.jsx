@@ -10,7 +10,7 @@ function ScaleList() {
     marginLeft: '5px'
   }
 
-  const scaleButtonDivStyle = {
+  const scaleButtonContainerStyle = {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr 1fr 1fr',
     justifyItems: 'center',
@@ -18,12 +18,12 @@ function ScaleList() {
   }
 
   const scaleButtonStyle = {
-    display: 'flex',
+    display: 'grid',
     alignItems: 'center',
     overflow: 'hidden',
     height: '90px',
-    width: '100px',
-    margin: '5px',
+    width: '50%',
+    margin: '5px auto',
     padding: '5px',
     color: 'black',
     fontWeight: 'bold',
@@ -36,7 +36,7 @@ function ScaleList() {
   return (
     <div style = {scaleListStyle}>
       <h1>Select a Chord Type</h1>
-      <div style = {scaleButtonDivStyle}>
+      <div style = {scaleButtonContainerStyle}>
         <Link style = {scaleButtonStyle} to="/ionian">Major / Ionian</Link>
         <Link style = {scaleButtonStyle} to="/aeolian">Natural Minor / Aeolian</Link>
         <Link style = {scaleButtonStyle} to="/harmonic">Harmonic Minor</Link>

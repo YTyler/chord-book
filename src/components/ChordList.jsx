@@ -10,7 +10,7 @@ function ChordList() {
     marginLeft: '5px'
   }
 
-  const chordButtonsDivStyle = {
+  const chordButtonContainerStyle = {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr 1fr 1fr',
     justifyItems: 'center',
@@ -18,11 +18,11 @@ function ChordList() {
   }
 
   const chordButtonStyle = {
-    display: 'flex',
+    display: 'grid',
     alignItems: 'center',
     height: '90px',
-    width: '100px',
-    margin: '5px',
+    width: '50%',
+    margin: '5px auto',
     padding: '5px',
     color: 'black',
     fontWeight: 'bold',
@@ -35,7 +35,7 @@ function ChordList() {
   return (
     <div style = {chordListStyle}>
       <h1>Select a Chord Type</h1>
-      <div style = {chordButtonsDivStyle}>
+      <div style = {chordButtonContainerStyle}>
         <Link style = {chordButtonStyle} to="/major">Major Triad</Link>
         <Link style = {chordButtonStyle} to="/minor">Minor Triad</Link>
         <Link style = {chordButtonStyle} to="/7ths">Dominant 7ths</Link>
