@@ -5,13 +5,19 @@
   margin: 10px;
 }
 
+body {
+  background-color: skyblue;
+  padding:30px;
+}
+
 #saved {
-    border: 2px solid black;
-    border-radius: 10px;
-    margin: 0px;
-    margin-bottom: 5px;
-    margin-right: 5px;
-    padding: 20px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 0px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  padding: 20px;
 }
 
 /* button selection styles */

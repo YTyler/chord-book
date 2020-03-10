@@ -4,6 +4,7 @@ function RootMenu() {
 
   //local styles
   const rootMenuStyle = {
+    backgroundColor: 'white',
     border: '2px solid black',
     borderRadius: '10px',
     minHeight: '300px',
