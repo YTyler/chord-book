@@ -25,7 +25,7 @@ function RootMenu() {
   }
 
   //hook declarations
-  const [selectedRoot, setRoot] = useState(['emptyStyle', 'emptyStyle', 'emptyStyle', 'emptyStyle', 'emptyStyle', 'emptyStyle' , 'emptyStyle']);
+  const [selectedRoot, setRoot] = useState(['emptyStyle', 'emptyStyle', 'selected', 'emptyStyle', 'emptyStyle', 'emptyStyle' , 'emptyStyle']);
   const [selectedAccidental, setAccidental] = useState(['emptyStyle', 'selected', 'emptyStyle'])
 
   //Click Functions for Selection
