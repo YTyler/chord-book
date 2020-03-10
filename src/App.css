@@ -14,6 +14,14 @@
     padding: 20px;
 }
 
+.emptyStyle {
+  background-color: white;
+}
+
+.selected {
+  background-color: skyblue;
+}
+
 a {
   color: black;
   font-weight: bold;

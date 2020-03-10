@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function NoteMenu() {
+
   const noteMenuStyle = {
     border: '2px solid black',
     borderRadius: '10px',
