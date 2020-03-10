@@ -14,12 +14,25 @@
     padding: 20px;
 }
 
+/* button selection styles */
 .emptyStyle {
-  background-color: white;
+  /* constant */
+  padding: 8px;
+  margin: 5px;
+  border: 1px black solid;
+  border-radius: 5px;
+  /* changed */
 }
-
 .selected {
-  background-color: skyblue;
+  /* constant */
+  padding: 8px;
+  margin: 5px;
+  border: 1px black solid;
+  border-radius: 5px;
+  /* changed */
+  margin-bottom: 15px;
+  margin-top: -10px;
+  box-shadow: 0px 5px 5px black
 }
 
 a {
