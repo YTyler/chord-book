@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function RootMenu() {
+function RootMenu(props) {
 
   //local styles
   const rootMenuStyle = {
@@ -30,14 +30,19 @@ function RootMenu() {
 
   //Click Functions for Selection
   function selectRoot(val) {
+    //page changes
     const newSelected = ['emptyStyle', 'emptyStyle', 'emptyStyle', 'emptyStyle', 'emptyStyle', 'emptyStyle' , 'emptyStyle']
     newSelected[parseInt(val)] = 'selected';
     setStyledRoot(newSelected);
+    //data changes
   }
   function selectAccidental(val) {
+    //page changes
     const newSelected = ['emptyStyle', 'emptyStyle', 'emptyStyle']
     newSelected[parseInt(val)] = 'selected';
     setStyledAccidental(newSelected);
+    //data changes
+    console.log(props.currentRoot);
   }
 
   return (

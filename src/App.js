@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
 
@@ -11,13 +11,15 @@ import IntervalMenu from './components/IntervalMenu';
 
 function App() {
 
+    //state hook declarations
+    const [currentRoot, setRoot] = useState('C')
     return (
       <div>
         <h1>App Title</h1>
         <div className="App">
           <div>
             <h2 id='saved'>- My Saved Lists -</h2>
-            <RootMenu/>
+            <RootMenu currentRoot = {currentRoot} setRoot = {setRoot}/>
           </div>
           <Switch>
             <Route exact path='/' render={()=><NoteMenu />} />
