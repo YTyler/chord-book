@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 function ChordList() {
+
   const chordListStyle = {
     border: '2px solid black',
     borderRadius: '10px',

@@ -1,6 +1,7 @@
 import React from 'react';
 
 function RootMenu() {
+
   const rootMenuStyle = {
     border: '2px solid black',
     borderRadius: '10px',
@@ -15,6 +16,10 @@ function RootMenu() {
   const accidentalListStyle = {
     display: 'flex',
     justifyContent: 'space-evenly'
+  }
+
+  const defaultRoot = {
+    backgroundColor: 'blue',
   }
 
   return (
