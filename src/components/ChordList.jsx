@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 function ChordList() {
 
   const chordListStyle = {
+    backgroundColor: 'white',
     border: '2px solid black',
     borderRadius: '10px',
     padding: '15px',

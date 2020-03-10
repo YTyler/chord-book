@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 function ScaleList() {
   const scaleListStyle = {
+    backgroundColor: 'white',
     border: '2px solid black',
     borderRadius: '10px',
     minHeight: '300px',
