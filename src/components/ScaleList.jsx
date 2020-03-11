@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function ScaleList() {
+function ScaleList(props) {
+
+  //local styles
   const scaleListStyle = {
     backgroundColor: 'white',
     border: '2px solid black',
@@ -10,14 +12,12 @@ function ScaleList() {
     minWidth: '600px',
     marginLeft: '5px'
   }
-
   const scaleButtonContainerStyle = {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr 1fr 1fr',
     justifyItems: 'center',
     margin: '5px',
   }
-
   const scaleButtonStyle = {
     display: 'grid',
     alignItems: 'center',

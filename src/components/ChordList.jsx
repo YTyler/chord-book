@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function ChordList() {
+function ChordList(props) {
 
+//local styles
   const chordListStyle = {
     backgroundColor: 'white',
     border: '2px solid black',
@@ -12,14 +13,12 @@ function ChordList() {
     minWidth: '600px',
     marginLeft: '5px'
   }
-
   const chordButtonContainerStyle = {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr 1fr 1fr',
     justifyItems: 'center',
     margin: '5px',
   }
-
   const chordButtonStyle = {
     display: 'grid',
     alignItems: 'center',

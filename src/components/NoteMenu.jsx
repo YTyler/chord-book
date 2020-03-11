@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function NoteMenu() {
+function NoteMenu(props) {
 
+//local state
   const noteMenuStyle = {
     backgroundColor: 'white',
     border: '2px solid black',
@@ -13,8 +14,11 @@ function NoteMenu() {
     marginLeft: '5px'
   }
   const noteStyle = {
-    textAlign: 'right',
-    padding: '5px',
+    textAlign: 'left',
+    margin: '8px', //overide user-stylesheet
+    marginBottom: '30px',
+    paddingLeft: '10px',
+    fontSize: '45px'
   }
   const noteButtonContainerStyle = {
     display: 'grid',
@@ -34,7 +38,7 @@ function NoteMenu() {
 
   return (
     <div style = {noteMenuStyle}>
-        <h1 style = {noteStyle}>Root Note: C</h1>
+        <h1 style = {noteStyle}>{props.currentRoot}</h1>
         <div style = {noteButtonContainerStyle}>
           <Link style = {noteButtonStyle} to = "/chords">View Chord Types</Link>
           <Link style = {noteButtonStyle} to = "/scales">View Scales</Link>
