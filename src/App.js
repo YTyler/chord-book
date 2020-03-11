@@ -22,6 +22,7 @@ function App(props) {
             <RootMenu setCurrentRoot={setCurrentRoot}/>
           </div>
           <Switch>
+            //Menu Routes
             <Route exact path='/' render={()=><NoteMenu currentRoot={currentRoot} />} />
             <Route exact path='/chords' render={()=><ChordList currentRoot={currentRoot} />} />
             <Route exact path='/scales' render={()=><ScaleList currentRoot={currentRoot} />} />

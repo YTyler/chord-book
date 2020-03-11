@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function NoteMenu(props) {
 
-//local state
+//local styles
   const noteMenuStyle = {
     backgroundColor: 'white',
     border: '2px solid black',

@@ -11,6 +11,7 @@ const intervalMenuStyle = {
   minWidth: '600px',
   marginLeft: '5px'
 }
+
 class IntervalMenu extends React.Component {
   constructor(props) {
     super(props);
@@ -20,10 +21,10 @@ class IntervalMenu extends React.Component {
     this.submitInterval = this.submitInterval.bind(this);
   }
 
+  //state functions
   changeInterval(event) {
     this.setState({interval: event.target.value})
   }
-
   submitInterval(event) {
     alert('Your Choice was ' + this.state.interval)
     event.preventDefault();
