@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Major() {
+function MajorChord() {
 
   //localStyles
 
@@ -11,4 +11,4 @@ function Major() {
     );
 }
 
-export default Major;
+export default MajorChord;
