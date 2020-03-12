@@ -35,7 +35,7 @@ function ChordList(props) {
         <Link style = {chordButtonStyle} to="/chords/maj7">Major 7ths</Link>
         <Link style = {chordButtonStyle} to="/chords/min7">Minor 7ths</Link>
         <Link style = {chordButtonStyle} to="/chords/dim">Diminished</Link>
-        <Link style = {chordButtonStyle} to="/chords/half-dim">Half Diminished</Link>
+        <Link style = {chordButtonStyle} to="/chords/half-dim">Half Diminished (m7♭5)</Link>
         <Link style = {chordButtonStyle} to="/chords/aug">Augmented</Link>
       </div>
       <Link to='/'>Main Menu</Link>
