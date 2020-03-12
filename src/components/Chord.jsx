@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import { Chord } from '@tonaljs/tonal';
+import { Chord as TonalChord } from '@tonaljs/tonal';
 
-function MinorChord(props) {
-  const chord = Chord.get(props.currentRoot + 'm')
+function Chord(props) {
+  const chord = TonalChord.get(props.currentRoot + props.type)
   //localStyles
+
     return (
       <div className = 'rightMenu'>
         <h1>{chord.name} Chords</h1>
@@ -16,4 +17,4 @@ function MinorChord(props) {
     );
 }
 
-export default MinorChord;
+export default Chord;
