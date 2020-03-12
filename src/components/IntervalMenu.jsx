@@ -3,32 +3,25 @@ import { Link } from 'react-router-dom'
 import { Note } from '@tonaljs/tonal'
 
 const intervalMenuStyle = {
-  backgroundColor: 'white',
   textAlign: 'left',
-  border: '2px solid black',
-  borderRadius: '10px',
-  padding: '15px',
-  minHeight: '300px',
-  minWidth: '600px',
-  marginLeft: '5px'
 }
 
 function IntervalMenu(props) {
-  const [intervalSelected, setSelectedInterval] = useState('P1');
-  const
+  const [interval, setInterval] = useState('P1');
+  const [intervalNote, setIntervalNote] = useState(Note.transpose(props.currentRoot, interval));
 
   const submitInterval = (e) => {
     e.preventDefault();
-    console.log(intervalSelected);
-    console.log(Note.transpose(props.currentRoot, intervalSelected));
+    setIntervalNote(Note.transpose(props.currentRoot, interval))
+    console.log(interval);
   }
 
   return(
-    <div style={intervalMenuStyle}>
+    <div className='rightMenu' style={intervalMenuStyle}>
       <h1>Interval Menu</h1>
       <h2>Root Note: {props.currentRoot}</h2>
       <form onSubmit = {e => submitInterval(e)}>
-        <select value={intervalSelected} onChange={e => setSelectedInterval(e.currentTarget.value)} >
+        <select value={interval} onChange={e => setInterval(e.currentTarget.value)} >
           <option value={'P1'}>Unison</option>
           <option value={'d2'}>2nd - Diminished</option>
           <option value={'m2'}>2nd - Minor</option>
@@ -54,7 +47,7 @@ function IntervalMenu(props) {
         <button type='submit'>Calculate</button>
       </form>
       <br></br>
-      <h2> ''
+      <h2>The interval note up from the root is {intervalNote}</h2>
       <Link to='/'>Main Menu</Link>
     </div>
   )
