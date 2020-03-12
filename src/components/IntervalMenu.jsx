@@ -16,12 +16,17 @@ function IntervalMenu(props) {
     console.log(interval);
   }
 
+  const onSelection = (e) => {
+    setInterval(e.currentTarget.value)
+    console.log(interval);
+  }
+
   return(
     <div className='rightMenu' style={intervalMenuStyle}>
       <h1>Interval Menu</h1>
       <h2>Root Note: {props.currentRoot}</h2>
       <form onSubmit = {e => submitInterval(e)}>
-        <select value={interval} onChange={e => setInterval(e.currentTarget.value)} >
+        <select value={interval} onChange={e => onSelection(e)} >
           <option value={'P1'}>Unison</option>
           <option value={'d2'}>2nd - Diminished</option>
           <option value={'m2'}>2nd - Minor</option>
