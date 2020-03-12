@@ -18,8 +18,6 @@ function App(props) {
     //state hook declarations
     const [currentRoot, setCurrentRoot] = useState('C')
     return (
-      <div>
-        <h1>App Title</h1>
         <div className="App">
           <div>
             <h2 id='saved'>- My Saved Lists -</h2>
@@ -56,7 +54,6 @@ function App(props) {
 
           </Switch>
         </div>
-      </div>
     );
 }
 
