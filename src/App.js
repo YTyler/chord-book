@@ -11,6 +11,7 @@ import IntervalMenu from './components/IntervalMenu';
 
 //Scale Components
 import Ionian from './components/Ionian'
+import Aeolian from './components/Aeolian'
 //Chord Components
 import MajorChord from './components/MajorChord';
 import MinorChord from './components/MinorChord';
@@ -37,7 +38,7 @@ function App(props) {
             {//Scale Routes
             }
             <Route exact path="/scales/ionian" render={()=><Ionian currentRoot={currentRoot}/>} />
-            <Route exact path="/scales/aeolian" render={''} />
+            <Route exact path="/scales/aeolian" render={()=><Aeolian currentRoot={currentRoot}/>} />
             {
             // <Route exact path="/scales/harmonic" render={''} />
             // <Route exact path="/scales/melodic" render={''} />
