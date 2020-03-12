@@ -36,23 +36,23 @@ function App(props) {
             //Scale Routes
             <Route exact path="/scales/ionian" render={''} />
             <Route exact path="/scales/aeolian" render={''} />
-            <Route exact path="/scales/harmonic" render={''} />
-            <Route exact path="/scales/melodic" render={''} />
-            <Route exact path="/scales/pentatonic-minor" render={''} />
-            <Route exact path="/scales/blues" render={''} />
-            <Route exact path="/scales/pentatonic-major" render={''} />
-            <Route exact path="/scales/bebop" render={''} />
+            // <Route exact path="/scales/harmonic" render={''} />
+            // <Route exact path="/scales/melodic" render={''} />
+            // <Route exact path="/scales/pentatonic-minor" render={''} />
+            // <Route exact path="/scales/blues" render={''} />
+            // <Route exact path="/scales/pentatonic-major" render={''} />
+            // <Route exact path="/scales/bebop" render={''} />
 
             //Chord Routes
             <Route exact path="/chords/major" render={()=><MajorChord currentRoot={currentRoot}/>} />
-            <Route exact path="/chords/minor" render={''} />
-            <Route exact path="/chords/7ths" render={''} />
-            <Route exact path="/chords/maj7" render={''} />
-            <Route exact path="/chords/maj7" render={''} />
-            <Route exact path="/chords/min7" render={''} />
-            <Route exact path="/chords/dim" render={''} />
-            <Route exact path="/chords/half-dim" render={''} />
-            <Route exact path="/chords/aug" render={''} />
+            <Route exact path="/chords/minor" render={()=><MinorChord currentRoot={currentRoot}/>} />
+            // <Route exact path="/chords/7ths" render={''} />
+            // <Route exact path="/chords/maj7" render={''} />
+            // <Route exact path="/chords/maj7" render={''} />
+            // <Route exact path="/chords/min7" render={''} />
+            // <Route exact path="/chords/dim" render={''} />
+            // <Route exact path="/chords/half-dim" render={''} />
+            // <Route exact path="/chords/aug" render={''} />
           </Switch>
         </div>
       </div>
