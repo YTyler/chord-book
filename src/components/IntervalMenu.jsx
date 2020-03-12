@@ -9,16 +9,26 @@ const intervalMenuStyle = {
 function IntervalMenu(props) {
   const [interval, setInterval] = useState('P1');
   const [intervalNote, setIntervalNote] = useState(Note.transpose(props.currentRoot, interval));
+  const [intervalBool, setIntervalBool] = useState(false);
 
   const submitInterval = (e) => {
     e.preventDefault();
     setIntervalNote(Note.transpose(props.currentRoot, interval))
+    setIntervalBool(true);
     console.log(interval);
   }
 
   const onSelection = (e) => {
     setInterval(e.currentTarget.value)
-    console.log(interval);
+    setIntervalBool(false);
+  }
+
+  function intervalDisplay() {
+    if (intervalBool) {
+      return (`${intervalNote} is a ${interval} away from ${props.currentRoot}`);
+    } else {
+      return ('');
+    }
   }
 
   return(
@@ -52,7 +62,7 @@ function IntervalMenu(props) {
         <button type='submit'>Calculate</button>
       </form>
       <br></br>
-      <h2>The interval note up from the root is {intervalNote}</h2>
+      <h2>{intervalDisplay()}</h2>
       <Link to='/'>Main Menu</Link>
     </div>
   )
