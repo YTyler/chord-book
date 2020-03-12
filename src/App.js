@@ -31,8 +31,8 @@ function App(props) {
             {//Menu Routes
             }
             <Route exact path='/' render={()=><NoteMenu currentRoot={currentRoot} />} />
-            <Route exact path='/chords' render={()=><ChordList currentRoot={currentRoot} />} />
-            <Route exact path='/scales' render={()=><ScaleList currentRoot={currentRoot} />} />
+            <Route exact path='/chords' render={()=><ChordList />} />
+            <Route exact path='/scales' render={()=><ScaleList />} />
             <Route exact path='/intervals' render={()=><IntervalMenu currentRoot={currentRoot} />} />
             {//Scale Routes
             }
