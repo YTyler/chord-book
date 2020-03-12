@@ -8,7 +8,7 @@ function Chord(props) {
 
     return (
       <div className = 'rightMenu'>
-        <h1>{chord.name} Chords</h1>
+        <h1>{chord.name} chords</h1>
         <h2>Notes: {chord.notes.join('-')}</h2>
         <Link to='/'>Main Menu</Link>
         <br></br>
