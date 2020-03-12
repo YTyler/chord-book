@@ -4,14 +4,6 @@ import { Link } from 'react-router-dom'
 function ScaleList(props) {
 
   //local styles
-  const scaleListStyle = {
-    backgroundColor: 'white',
-    border: '2px solid black',
-    borderRadius: '10px',
-    minHeight: '300px',
-    minWidth: '600px',
-    marginLeft: '5px'
-  }
   const scaleButtonContainerStyle = {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr 1fr 1fr',
@@ -35,17 +27,17 @@ function ScaleList(props) {
   }
 
   return (
-    <div style = {scaleListStyle}>
-      <h1>Select a Chord Type</h1>
+    <div className = 'rightMenu'>
+      <h1>Select a Scale Type</h1>
       <div style = {scaleButtonContainerStyle}>
-        <Link style = {scaleButtonStyle} to="/ionian">Major / Ionian</Link>
-        <Link style = {scaleButtonStyle} to="/aeolian">Natural Minor / Aeolian</Link>
-        <Link style = {scaleButtonStyle} to="/harmonic">Harmonic Minor</Link>
-        <Link style = {scaleButtonStyle} to="/melodic">Melodic Minor</Link>
-        <Link style = {scaleButtonStyle} to="/pentatonic-minor">Pentatonic Minor</Link>
-        <Link style = {scaleButtonStyle} to="/blues">Blues Scale</Link>
-        <Link style = {scaleButtonStyle} to="/pentatonic-major">Pentatonic Major</Link>
-        <Link style = {scaleButtonStyle} to="/bebop">Bebop Scale</Link>
+        <Link style = {scaleButtonStyle} to="/scales/ionian">Major / Ionian</Link>
+        <Link style = {scaleButtonStyle} to="/scales/aeolian">Natural Minor / Aeolian</Link>
+        <Link style = {scaleButtonStyle} to="/scales/harmonic">Harmonic Minor</Link>
+        <Link style = {scaleButtonStyle} to="/scales/melodic">Melodic Minor</Link>
+        <Link style = {scaleButtonStyle} to="/scales/pentatonic-minor">Pentatonic Minor</Link>
+        <Link style = {scaleButtonStyle} to="/scales/blues">Blues Scale</Link>
+        <Link style = {scaleButtonStyle} to="/scales/pentatonic-major">Pentatonic Major</Link>
+        <Link style = {scaleButtonStyle} to="/scales/bebop">Bebop Scale</Link>
       </div>
       <Link to='/'>Main Menu</Link>
     </div>

@@ -4,15 +4,6 @@ import { Link } from 'react-router-dom';
 function NoteMenu(props) {
 
 //local styles
-  const noteMenuStyle = {
-    backgroundColor: 'white',
-    border: '2px solid black',
-    borderRadius: '10px',
-    padding: '15px',
-    minHeight: '300px',
-    minWidth: '600px',
-    marginLeft: '5px'
-  }
   const noteStyle = {
     textAlign: 'left',
     margin: '8px', //overide user-stylesheet
@@ -37,7 +28,7 @@ function NoteMenu(props) {
   }
 
   return (
-    <div style = {noteMenuStyle}>
+    <div className = 'rightMenu'>
         <h1 style = {noteStyle}>{props.currentRoot}</h1>
         <div style = {noteButtonContainerStyle}>
           <Link style = {noteButtonStyle} to = "/chords">View Chord Types</Link>

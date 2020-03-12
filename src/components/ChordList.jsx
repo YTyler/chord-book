@@ -4,15 +4,6 @@ import { Link } from 'react-router-dom'
 function ChordList(props) {
 
 //local styles
-  const chordListStyle = {
-    backgroundColor: 'white',
-    border: '2px solid black',
-    borderRadius: '10px',
-    padding: '15px',
-    minHeight: '300px',
-    minWidth: '600px',
-    marginLeft: '5px'
-  }
   const chordButtonContainerStyle = {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr 1fr 1fr',
@@ -35,17 +26,17 @@ function ChordList(props) {
   }
 
   return (
-    <div style = {chordListStyle}>
+    <div className = 'rightMenu'>
       <h1>Select a Chord Type</h1>
       <div style = {chordButtonContainerStyle}>
-        <Link style = {chordButtonStyle} to="/major">Major Triad</Link>
-        <Link style = {chordButtonStyle} to="/minor">Minor Triad</Link>
-        <Link style = {chordButtonStyle} to="/7ths">Dominant 7ths</Link>
-        <Link style = {chordButtonStyle} to="/maj7">Major 7ths</Link>
-        <Link style = {chordButtonStyle} to="/min7">Minor 7ths</Link>
-        <Link style = {chordButtonStyle} to="/dim">Diminished</Link>
-        <Link style = {chordButtonStyle} to="/half-dim">Half Diminished</Link>
-        <Link style = {chordButtonStyle} to="/aug">Augmented</Link>
+        <Link style = {chordButtonStyle} to="/chords/major">Major Triad</Link>
+        <Link style = {chordButtonStyle} to="/chords/minor">Minor Triad</Link>
+        <Link style = {chordButtonStyle} to="/chords/7ths">Dominant 7ths</Link>
+        <Link style = {chordButtonStyle} to="/chords/maj7">Major 7ths</Link>
+        <Link style = {chordButtonStyle} to="/chords/min7">Minor 7ths</Link>
+        <Link style = {chordButtonStyle} to="/chords/dim">Diminished</Link>
+        <Link style = {chordButtonStyle} to="/chords/half-dim">Half Diminished</Link>
+        <Link style = {chordButtonStyle} to="/chords/aug">Augmented</Link>
       </div>
       <Link to='/'>Main Menu</Link>
     </div>
