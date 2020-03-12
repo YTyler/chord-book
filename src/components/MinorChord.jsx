@@ -10,6 +10,9 @@ function MinorChord(props) {
       <div className = 'rightMenu'>
         <h1>{chord.name} Chords</h1>
         <h2>Notes: {chord.notes[0]} {chord.notes[1]} {chord.notes[2]}</h2>
+        <Link to='/'>Main Menu</Link>
+        <br></br>
+        <Link to='/chords'>Back</Link>
       </div>
     );
 }
