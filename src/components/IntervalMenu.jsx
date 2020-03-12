@@ -24,7 +24,7 @@ function IntervalMenu(props) {
   //render interval explanation
   function intervalDisplay() {
     if (props.intervalBool) {
-      return (`A ${intervalAsName(interval)} from ${props.currentRoot} is ${intervalNote}`);
+      return (`A${intervalAsName(interval)} from ${props.currentRoot} is ${intervalNote}`);
     } else {
       return ('');
     }
@@ -37,19 +37,19 @@ function IntervalMenu(props) {
     let name = '';
     switch(quality) {
       case 'd':
-        name += 'Diminished';
+        name += ' Diminished';
         break;
       case 'm':
-        name += 'Minor';
+        name += ' Minor';
         break;
       case 'M':
-        name += 'Major';
+        name += ' Major';
         break;
       case 'P':
-        name += 'Perfect';
+        name += ' Perfect';
         break;
       case 'A':
-        name += 'Augmented';
+        name += 'n Augmented';
         break;
       default:
         console.log('Error parsing interval to name (quality)');
