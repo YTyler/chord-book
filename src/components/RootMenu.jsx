@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'
 
 function RootMenu(props) {
 
@@ -44,7 +43,6 @@ function RootMenu(props) {
     setStyledRoot(newSelected);
     //data changes
     setLetter(letter);
-
   }
   function onAccidentalSelection(val, accidental) {
     //page changes
@@ -62,7 +60,7 @@ function RootMenu(props) {
   return (
     <div style = {rootMenuStyle}>
       <h1>Select Root Note</h1>
-      <Link to='/' style = {noteListStyle}>
+      <div style = {noteListStyle}>
         <h2 className={styledRoot[0]} onClick={() => onLetterSelection(0, 'A')}>A</h2>
         <h2 className={styledRoot[1]} onClick={() => onLetterSelection(1, 'B')}>B</h2>
         <h2 className={styledRoot[2]} onClick={() => onLetterSelection(2, 'C')}>C</h2>
@@ -70,13 +68,13 @@ function RootMenu(props) {
         <h2 className={styledRoot[4]} onClick={() => onLetterSelection(4, 'E')}>E</h2>
         <h2 className={styledRoot[5]} onClick={() => onLetterSelection(5, 'F')}>F</h2>
         <h2 className={styledRoot[6]} onClick={() => onLetterSelection(6, 'G')}>G</h2>
-        </Link>
+        </div>
       <h1>Add an Accidental</h1>
-      <Link to='/' style = {accidentalListStyle}>
+      <div style = {accidentalListStyle}>
         <h2 className={styledAccidental[0]} onClick={() => onAccidentalSelection(0, 'b')}>♭</h2>
         <h2 className={styledAccidental[1]} onClick={() => onAccidentalSelection(1, '')}>♮</h2>
         <h2 className={styledAccidental[2]} onClick={() => onAccidentalSelection(2, '#')}>♯</h2>
-        </Link>
+        </div>
       <h2>(Flat, Natural, Sharp)</h2>
     </div>
   );
