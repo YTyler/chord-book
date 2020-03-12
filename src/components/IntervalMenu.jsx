@@ -14,37 +14,47 @@ const intervalMenuStyle = {
 }
 
 function IntervalMenu(props) {
-  
-  const [interval, setInterval] = useState(1);
+  const [intervalSelected, setSelectedInterval] = useState('P1');
+  const
 
-  //state functions
-  // changeInterval(event) {
-  //   this.setState({interval: event.target.value})
-  // }
-  const submitInterval = () => {
-    console.log(interval);
-    console.log(props.currentRoot);
+  const submitInterval = (e) => {
+    e.preventDefault();
+    console.log(intervalSelected);
+    console.log(Note.transpose(props.currentRoot, intervalSelected));
   }
 
   return(
     <div style={intervalMenuStyle}>
       <h1>Interval Menu</h1>
       <h2>Root Note: {props.currentRoot}</h2>
-      <form onSubmit = {submitInterval()}>
-        <select value={interval} onChange={e => setInterval(e.currentTarget.value)} >
-          <option value={1}>Unison</option>
-          <option value={2}>2nd</option>
-          <option value={3}>3rd</option>
-          <option value={4}>4th</option>
-          <option value={5}>5th</option>
-          <option value={6}>6th</option>
-          <option value={7}>7th</option>
-          <option value={8}>Octave</option>
+      <form onSubmit = {e => submitInterval(e)}>
+        <select value={intervalSelected} onChange={e => setSelectedInterval(e.currentTarget.value)} >
+          <option value={'P1'}>Unison</option>
+          <option value={'d2'}>2nd - Diminished</option>
+          <option value={'m2'}>2nd - Minor</option>
+          <option value={'M2'}>2nd - Major</option>
+          <option value={'d3'}>3rd - Diminished</option>
+          <option value={'m3'}>3rd - Minor</option>
+          <option value={'M3'}>3rd - Major</option>
+          <option value={'d4'}>4th - Diminished</option>
+          <option value={'P4'}>4th - Perfect</option>
+          <option value={'A4'}>4th - Augmented</option>
+          <option value={'d5'}>5th - Diminished</option>
+          <option value={'P5'}>5th - Perfect</option>
+          <option value={'A5'}>5th - Augmented</option>
+          <option value={'d6'}>6th - Diminished</option>
+          <option value={'m6'}>6th - Minor</option>
+          <option value={'M6'}>6th - Major</option>
+          <option value={'d7'}>7th - Diminished</option>
+          <option value={'m7'}>7th - Minor</option>
+          <option value={'M7'}>7th - Major</option>
+          <option value={'P8'}>Octave</option>
         </select>
         <br></br>
         <button type='submit'>Calculate</button>
       </form>
       <br></br>
+      <h2> ''
       <Link to='/'>Main Menu</Link>
     </div>
   )
