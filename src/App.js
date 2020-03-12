@@ -9,17 +9,12 @@ import ChordList from './components/ChordList';
 import ScaleList from './components/ScaleList';
 import IntervalMenu from './components/IntervalMenu';
 
-//Scale Components
-import Ionian from './components/Ionian'
-import Aeolian from './components/Aeolian'
-//Chord Components
+//Other Components
+import Scale from './components/Scale';
 import Chord from './components/Chord';
-
-import { ChordType } from '@tonaljs/tonal'
 
 
 function App(props) {
-console.log(ChordType.symbols());
     //state hook declarations
     const [currentRoot, setCurrentRoot] = useState('C')
     return (
@@ -39,20 +34,18 @@ console.log(ChordType.symbols());
             <Route exact path='/intervals' render={()=><IntervalMenu currentRoot={currentRoot} />} />
             {//Scale Routes
             }
-            <Route exact path="/scales/ionian" render={()=><Ionian currentRoot={currentRoot}/>} />
-            <Route exact path="/scales/aeolian" render={()=><Aeolian currentRoot={currentRoot}/>} />
-            {
-            // <Route exact path="/scales/harmonic" render={''} />
-            // <Route exact path="/scales/melodic" render={''} />
-            // <Route exact path="/scales/pentatonic-minor" render={''} />
-            // <Route exact path="/scales/blues" render={''} />
-            // <Route exact path="/scales/pentatonic-major" render={''} />
-            // <Route exact path="/scales/bebop" render={''} />
-            }
+            <Route exact path="/scales/ionian" render={()=><Scale currentRoot={currentRoot} type={'ionian'}/>} />
+            <Route exact path="/scales/aeolian" render={()=><Scale currentRoot={currentRoot} type={'minor'}/>} />
+            <Route exact path="/scales/harmonic" render={()=><Scale currentRoot={currentRoot} type={'harmonic minor'}/>} />
+            <Route exact path="/scales/melodic" render={()=><Scale currentRoot={currentRoot} type={'melodic minor'}/>} />
+            <Route exact path="/scales/pentatonic-minor" render={()=><Scale currentRoot={currentRoot} type={'minor pentatonic'}/>} />
+            <Route exact path="/scales/blues" render={()=><Scale currentRoot={currentRoot} type={'blues'}/>} />
+            <Route exact path="/scales/pentatonic-major" render={()=><Scale currentRoot={currentRoot} type={'major pentatonic'}/>} />
+            <Route exact path="/scales/bebop" render={()=><Scale currentRoot={currentRoot} type={'bebop'}/>} />
 
             {//Chord Routes
             }
-            <Route exact path="/chords/major" render={()=><Chord currentRoot={currentRoot} type ={'major'}/>} />
+            <Route exact path="/chords/major" render={()=><Chord currentRoot={currentRoot} type={'major'}/>} />
             <Route exact path="/chords/minor" render={()=><Chord currentRoot={currentRoot} type={'m'}/>} />
             <Route exact path="/chords/7ths" render={()=><Chord currentRoot={currentRoot} type={'7'}/>} />
             <Route exact path="/chords/maj7" render={()=><Chord currentRoot={currentRoot} type={'maj7'}/>} />
