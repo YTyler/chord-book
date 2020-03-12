@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import { Chord as TonalChord } from '@tonaljs/tonal';
+import  * as vex from 'vexchords';
 
 function Chord(props) {
   const chord = TonalChord.get(props.currentRoot + props.type)
