@@ -13,11 +13,13 @@ import IntervalMenu from './components/IntervalMenu';
 import Ionian from './components/Ionian'
 import Aeolian from './components/Aeolian'
 //Chord Components
-import MajorChord from './components/MajorChord';
-import MinorChord from './components/MinorChord';
+import Chord from './components/Chord';
+
+import { ChordType } from '@tonaljs/tonal'
+
 
 function App(props) {
-
+console.log(ChordType.symbols());
     //state hook declarations
     const [currentRoot, setCurrentRoot] = useState('C')
     return (
@@ -50,17 +52,15 @@ function App(props) {
 
             {//Chord Routes
             }
-            <Route exact path="/chords/major" render={()=><MajorChord currentRoot={currentRoot}/>} />
-            <Route exact path="/chords/minor" render={()=><MinorChord currentRoot={currentRoot}/>} />
-            {
-            // <Route exact path="/chords/7ths" render={''} />
-            // <Route exact path="/chords/maj7" render={''} />
-            // <Route exact path="/chords/maj7" render={''} />
-            // <Route exact path="/chords/min7" render={''} />
-            // <Route exact path="/chords/dim" render={''} />
-            // <Route exact path="/chords/half-dim" render={''} />
-            // <Route exact path="/chords/aug" render={''} />
-            }
+            <Route exact path="/chords/major" render={()=><Chord currentRoot={currentRoot} type ={'major'}/>} />
+            <Route exact path="/chords/minor" render={()=><Chord currentRoot={currentRoot} type={'m'}/>} />
+            <Route exact path="/chords/7ths" render={()=><Chord currentRoot={currentRoot} type={'7'}/>} />
+            <Route exact path="/chords/maj7" render={()=><Chord currentRoot={currentRoot} type={'maj7'}/>} />
+            <Route exact path="/chords/min7" render={()=><Chord currentRoot={currentRoot} type={'m7'}/>} />
+            <Route exact path="/chords/dim" render={()=><Chord currentRoot={currentRoot} type={'dim7'}/>} />
+            <Route exact path="/chords/half-dim" render={()=><Chord currentRoot={currentRoot} type={'m7b5'}/>} />
+            <Route exact path="/chords/aug" render={()=><Chord currentRoot={currentRoot} type={'aug'}/>} />
+
           </Switch>
         </div>
       </div>
