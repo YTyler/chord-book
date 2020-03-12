@@ -15,7 +15,6 @@ function IntervalMenu(props) {
     e.preventDefault();
     setIntervalNote(Note.transpose(props.currentRoot, interval))
     setIntervalBool(true);
-    console.log(interval);
   }
 
   const onSelection = (e) => {
@@ -23,13 +22,43 @@ function IntervalMenu(props) {
     setIntervalBool(false);
   }
 
+  //render interval explanation
   function intervalDisplay() {
     if (intervalBool) {
-      return (`${intervalNote} is a ${interval} away from ${props.currentRoot}`);
+      return (`A ${intervalAsName(interval)} from ${props.currentRoot} is ${intervalNote}`);
     } else {
       return ('');
     }
   }
+  //convert interval value to long name (ex. 'P5 -> Perfect Fifth')
+  function intervalAsName(string) {
+    const quality = string[0];
+    const value = parseInt(string[1]);
+    const distances = ['Unison', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Octave']
+    let name = '';
+    switch(quality) {
+      case 'd':
+        name += 'Diminished';
+        break;
+      case 'm':
+        name += 'Minor';
+        break;
+      case 'M':
+        name += 'Major';
+        break;
+      case 'P':
+        name += 'Perfect';
+        break;
+      case 'A':
+        name += 'Augmented';
+        break;
+      default:
+        console.log('Error parsing interval to name (quality)');
+    }
+    name += ' ' + distances[value-1];
+    return name;
+  }
+
 
   return(
     <div className='rightMenu' style={intervalMenuStyle}>
