@@ -43,6 +43,7 @@ function RootMenu(props) {
     setStyledRoot(newSelected);
     //data changes
     setLetter(letter);
+    props.setIntervalBool(false) //reset interval menu when root note changes
   }
   function onAccidentalSelection(val, accidental) {
     //page changes
@@ -51,6 +52,7 @@ function RootMenu(props) {
     setStyledAccidental(newSelected);
     //data changes
     setAccidental(accidental);
+    props.setIntervalBool(false) //reset interval menu when root note changes
   }
 
   useEffect(() => {

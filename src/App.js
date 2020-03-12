@@ -17,11 +17,13 @@ import Chord from './components/Chord';
 function App(props) {
     //state hook declarations
     const [currentRoot, setCurrentRoot] = useState('C')
+    const [intervalBool, setIntervalBool] = useState(false);
+
     return (
         <div className="App">
           <div>
             <h2 id='saved'>- My Saved Lists -</h2>
-            <RootMenu setCurrentRoot={setCurrentRoot}/>
+            <RootMenu setCurrentRoot={setCurrentRoot} setIntervalBool={setIntervalBool}/>
           </div>
           <Switch>
             {//Menu Routes
@@ -29,7 +31,7 @@ function App(props) {
             <Route exact path='/' render={()=><NoteMenu currentRoot={currentRoot} />} />
             <Route exact path='/chords' render={()=><ChordList />} />
             <Route exact path='/scales' render={()=><ScaleList />} />
-            <Route exact path='/intervals' render={()=><IntervalMenu currentRoot={currentRoot} />} />
+            <Route exact path='/intervals' render={()=><IntervalMenu currentRoot={currentRoot} intervalBool={intervalBool} setIntervalBool={setIntervalBool} />} />
             {//Scale Routes
             }
             <Route exact path="/scales/ionian" render={()=><Scale currentRoot={currentRoot} type={'ionian'}/>} />

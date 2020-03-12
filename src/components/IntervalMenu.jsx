@@ -9,22 +9,21 @@ const intervalMenuStyle = {
 function IntervalMenu(props) {
   const [interval, setInterval] = useState('P1');
   const [intervalNote, setIntervalNote] = useState(Note.transpose(props.currentRoot, interval));
-  const [intervalBool, setIntervalBool] = useState(false);
 
   const submitInterval = (e) => {
     e.preventDefault();
     setIntervalNote(Note.transpose(props.currentRoot, interval))
-    setIntervalBool(true);
+    props.setIntervalBool(true);
   }
 
   const onSelection = (e) => {
     setInterval(e.currentTarget.value)
-    setIntervalBool(false);
+    props.setIntervalBool(false);
   }
 
   //render interval explanation
   function intervalDisplay() {
-    if (intervalBool) {
+    if (props.intervalBool) {
       return (`A ${intervalAsName(interval)} from ${props.currentRoot} is ${intervalNote}`);
     } else {
       return ('');
