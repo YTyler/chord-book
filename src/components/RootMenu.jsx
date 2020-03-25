@@ -15,13 +15,13 @@ function RootMenu(props) {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr 1fr',
     margin: '15px',
-    fontSize: '1.5vw'
+    fontSize: 'clamp(20px, 1.5vw, 30px)',
   }
   const accidentalListStyle = {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr 1fr',
     margin: '15px',
-    fontSize: '1.5vw'
+    fontSize: 'clamp(20px, 1.5vw, 30px)',
   }
 
   //state hook declarations
@@ -36,6 +36,7 @@ function RootMenu(props) {
     props.setCurrentRoot(newRoot)
     return newRoot;
   }
+
   function onLetterSelection(val, letter) {
     //page changes
     const newSelected = ['emptyStyle', 'emptyStyle', 'emptyStyle', 'emptyStyle', 'emptyStyle', 'emptyStyle' , 'emptyStyle']
@@ -45,6 +46,7 @@ function RootMenu(props) {
     setLetter(letter);
     props.setIntervalBool(false) //reset interval menu when root note changes
   }
+
   function onAccidentalSelection(val, accidental) {
     //page changes
     const newSelected = ['emptyStyle', 'emptyStyle', 'emptyStyle']
