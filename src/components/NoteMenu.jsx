@@ -18,12 +18,11 @@ function NoteMenu(props) {
   const noteButtonStyle = {
     display: 'grid',
     alignItems: 'center',
-    height: '15vh',
-    minHeight: '100px',
+    height: '150px',
     width: '18vw',
     minWidth: '195px ',
     margin: '0 auto',
-    fontSize: '150%',
+    fontSize: 'clamp(25px, 1.75vw, 60px)',
     backgroundImage: 'linear-gradient(#CDC0BF, #696261)',
     border: '1px solid black',
     textShadow: '1px 1px white, 1px -1px white, -1px 1px white, -1px -1px white'

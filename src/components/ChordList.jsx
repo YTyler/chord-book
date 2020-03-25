@@ -13,13 +13,14 @@ function ChordList(props) {
   const chordButtonStyle = {
     display: 'grid',
     alignItems: 'center',
-    height: '90px',
-    width: '50%',
+    height: '115px',
+    width: '10vw',
+    minWidth: '110px',
     margin: '5px auto',
     padding: '5px',
     color: 'black',
     fontWeight: 'bold',
-    fontSize: '20px',
+    fontSize: 'clamp(16px, 1.25vw, 50px)',
     backgroundImage: 'linear-gradient(#CDC0BF, #696261)',
     border: '1px solid black',
     textShadow: '1px 1px white, 1px -1px white, -1px 1px white, -1px -1px white'

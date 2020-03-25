@@ -9,7 +9,6 @@ function RootMenu(props) {
     borderRadius: '10px',
     minHeight: '300px',
     minWidth: '250px',
-    marginRight: '5px',
   }
   const noteListStyle = {
     display: 'grid',
