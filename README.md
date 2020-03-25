@@ -1,5 +1,3 @@
-![Project Structure](./src/images/structure.png)
-
 # Interactive Chord & Scale Dictionary
 
 ## Author: Tyler Yates
@@ -12,12 +10,18 @@ This project provides a centralized place for musicians and music students to ac
 
 ### Contact Info
 
+The author can be contacted via email at tyates907@gmail.com
+
 ### Technologies Used
 * React
 * tonaljs
 * vexchords
 
-### License
+## Project Structure 
+
+![Project Structure](./src/images/structure.png)
+
+## License
 
 MIT License
 
