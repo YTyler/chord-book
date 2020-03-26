@@ -39,7 +39,9 @@ function ChordList(props) {
         <Link style = {chordButtonStyle} to="/chords/half-dim">Half Diminished (m7♭5)</Link>
         <Link style = {chordButtonStyle} to="/chords/aug">Augmented</Link>
       </div>
+      <div className='nav'>
       <Link to='/'>Main Menu</Link>
+      </div>
     </div>
   );
 }

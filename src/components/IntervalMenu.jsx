@@ -6,6 +6,10 @@ function IntervalMenu(props) {
   const [interval, setInterval] = useState('P1');
   const [intervalNote, setIntervalNote] = useState(Note.transpose(props.currentRoot, interval));
 
+  const test = {
+    color: 'blue',
+  }
+
   const submitInterval = (e) => {
     e.preventDefault();
     setIntervalNote(Note.transpose(props.currentRoot, interval))
@@ -25,7 +29,7 @@ function IntervalMenu(props) {
       return ('');
     }
   }
-  //convert interval value to long name (ex. 'P5 -> Perfect Fifth')
+  //convert interval value to long name (ex. 'P5' -> 'Perfect Fifth')
   function intervalAsName(string) {
     const quality = string[0];
     const value = parseInt(string[1]);
@@ -55,10 +59,12 @@ function IntervalMenu(props) {
   }
 
   return(
-    <div className='rightMenu' >
+    <div className='rightMenu'>
       <h1>Interval Menu</h1>
       <h2>Root Note: {props.currentRoot}</h2>
-      <Link to='/'>Return to Main Menu</Link>
+      <div className='nav'>
+      <Link to='/'>Main Menu</Link>
+      </div>
       <div>
         <form onSubmit = {e => submitInterval(e)}>
         <select value={interval} onChange={e => onSelection(e)} >

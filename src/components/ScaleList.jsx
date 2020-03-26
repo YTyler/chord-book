@@ -40,7 +40,9 @@ function ScaleList(props) {
         <Link style = {scaleButtonStyle} to="/scales/pentatonic-major">Pentatonic Major</Link>
         <Link style = {scaleButtonStyle} to="/scales/bebop">Bebop Scale</Link>
       </div>
+      <div className='nav'>
       <Link to='/'>Main Menu</Link>
+      </div>
     </div>
   );
 }
