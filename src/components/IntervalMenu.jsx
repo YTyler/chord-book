@@ -2,10 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
 import { Note } from '@tonaljs/tonal'
 
-const intervalMenuStyle = {
-  textAlign: 'left',
-}
-
 function IntervalMenu(props) {
   const [interval, setInterval] = useState('P1');
   const [intervalNote, setIntervalNote] = useState(Note.transpose(props.currentRoot, interval));
@@ -58,12 +54,13 @@ function IntervalMenu(props) {
     return name;
   }
 
-
   return(
-    <div className='rightMenu' style={intervalMenuStyle}>
+    <div className='rightMenu' >
       <h1>Interval Menu</h1>
       <h2>Root Note: {props.currentRoot}</h2>
-      <form onSubmit = {e => submitInterval(e)}>
+      <Link to='/'>Return to Main Menu</Link>
+      <div>
+        <form onSubmit = {e => submitInterval(e)}>
         <select value={interval} onChange={e => onSelection(e)} >
           <option value={'P1'}>Unison</option>
           <option value={'d2'}>2nd - Diminished</option>
@@ -86,12 +83,12 @@ function IntervalMenu(props) {
           <option value={'M7'}>7th - Major</option>
           <option value={'P8'}>Octave</option>
         </select>
-        <br></br>
+        <div>
         <button type='submit'>Calculate</button>
+        </div>
       </form>
-      <br></br>
+      </div>
       <h2>{intervalDisplay()}</h2>
-      <Link to='/'>Main Menu</Link>
     </div>
   )
 }
