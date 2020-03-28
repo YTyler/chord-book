@@ -6,10 +6,6 @@ function IntervalMenu(props) {
   const [interval, setInterval] = useState('P1');
   const [intervalNote, setIntervalNote] = useState(Note.transpose(props.currentRoot, interval));
 
-  const test = {
-    color: 'blue',
-  }
-
   const submitInterval = (e) => {
     e.preventDefault();
     setIntervalNote(Note.transpose(props.currentRoot, interval))
