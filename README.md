@@ -6,6 +6,12 @@ This project provides a centralized place for musicians and music students to ac
 
 ### Setup/Installation
 
+1. Clone the project using `git clone https://github.com/YTyler/epicodus-capstone.git`  
+
+2. Run `npm install` to install required libraries
+
+3. Run `npm start`    
+
 ### Known Bugs
 
 ### Contact Info
