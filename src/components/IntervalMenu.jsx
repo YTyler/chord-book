@@ -22,7 +22,7 @@ function IntervalMenu(props) {
     if (props.intervalBool) {
       return (`A${intervalAsName(interval)} from ${props.currentRoot} is ${intervalNote}`);
     } else {
-      return ('');
+      return <br></br>;
     }
   }
   //convert interval value to long name (ex. 'P5' -> 'Perfect Fifth')
@@ -58,9 +58,6 @@ function IntervalMenu(props) {
     <div className='rightMenu'>
       <h1>Interval Menu</h1>
       <h2>Root Note: {props.currentRoot}</h2>
-      <div className='nav'>
-      <Link to='/'>Main Menu</Link>
-      </div>
       <div>
         <form onSubmit = {e => submitInterval(e)}>
         <select value={interval} onChange={e => onSelection(e)} >
@@ -85,12 +82,17 @@ function IntervalMenu(props) {
           <option value={'M7'}>7th - Major</option>
           <option value={'P8'}>Octave</option>
         </select>
+        <br></br>
+        <br></br>
         <div>
         <button type='submit'>Calculate</button>
         </div>
       </form>
       </div>
       <h2>{intervalDisplay()}</h2>
+      <div className='nav'>
+        <Link to='/'>Main Menu</Link>
+      </div>
     </div>
   )
 }
