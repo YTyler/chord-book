@@ -9,7 +9,7 @@ function Scale(props) {
   console.log(TonalScale.names());
   return (
     <div className = 'rightMenu'>
-    <h1>{scale.name} {scale.aliases[0] ? '(aka ' + scale.aliases[0] + ')' : ''}</h1>
+    <h1>{scale.name} {scale.aliases[0] ? '(' + scale.aliases[0] + ')' : ''}</h1>
     <h2>Notes: {scale.notes.join('-')}</h2>
       <div className='nav'>
         <Link to='/'>Main Menu</Link>
