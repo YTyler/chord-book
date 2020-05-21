@@ -22,7 +22,7 @@ function App(props) {
     return (
         <div className="App">
           <div>
-            <h2 id='saved'>- My Saved Lists -</h2>
+            <h2 id='saved'>ChordBook</h2>
             <RootMenu setCurrentRoot={setCurrentRoot} setIntervalBool={setIntervalBool}/>
           </div>
           <Switch>
