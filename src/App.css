@@ -8,6 +8,7 @@
 body {
   margin: 0px;
   background-color: skyblue;
+  height: 100vh;
   padding:30px;
   font-family: monospace, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
