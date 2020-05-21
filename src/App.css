@@ -73,6 +73,11 @@ a {
   text-decoration: none;
 }
 
+.chordIMG {
+  width: 15%;
+  margin: 10px;
+}
+
 /* view changes */
 @media screen and (max-width: 1070px) {
   .App {
